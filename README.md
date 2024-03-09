@@ -64,3 +64,40 @@ The newly created offspring, along with the unmodified solutions from the previo
 The steps outlined above are repeated iteratively until the algorithm reaches the specified number of generations or achieves a satisfactory solution.
 
 Feel free to adapt these code snippets to fit the specifics of your implementation and problem domain.
+
+
+# Solving the 8-Queens Problem Using Genetic Algorithm
+
+The **8-Queens problem** is a classic chess puzzle where the goal is to place eight queens on an 8x8 chessboard in such a way that no two queens threaten each other. In other words, no two queens should be in the same row, column, or diagonal. The problem is not only an interesting chess challenge but also a common benchmark for testing optimization algorithms like **Genetic Algorithms (GA)**. In this article, we will explore how to use a Genetic Algorithm to find a solution to the 8-Queens problem.
+
+## Understanding the Problem
+
+Before diving into the Genetic Algorithm implementation, let's understand the constraints of the 8-Queens problem. Each queen must be placed in a unique row and column, ensuring that no two queens share the same row or column. Additionally, we need to guarantee that no queens are positioned in threatening diagonals.
+
+## Genetic Algorithm Approach
+
+The Genetic Algorithm is a natural fit for solving combinatorial optimization problems like the 8-Queens. Here's a step-by-step guide on how to apply a Genetic Algorithm to find a solution:
+
+1. **Chromosome Representation**
+   In the context of the 8-Queens problem, a chromosome represents a potential placement of queens on the chessboard. Each gene in the chromosome corresponds to the row position of a queen in the respective column.
+
+2. **Initialization**
+   Generate an initial population of potential solutions (chromosomes). Each chromosome should represent a unique placement of queens on the chessboard.
+
+3. **Fitness Calculation**
+   Define a fitness function that evaluates how well a chromosome satisfies the constraints of the 8-Queens problem. The fitness function should penalize configurations with queens threatening each other and reward valid solutions.
+
+4. **Selection**
+   Select parents from the population based on their fitness values. Higher fitness values should have a higher chance of being selected as parents.
+
+5. **Crossover**
+   Apply crossover to create offspring from the selected parents. Experiment with different crossover techniques, such as single-point, two-point, or uniform crossover, to discover the most effective approach for your specific problem.
+
+6. **Mutation**
+   Introduce diversity by applying mutation to the offspring. Mutation operations could involve randomly changing the row position of a queen or swapping the positions of two queens.
+
+7. **New Generation**
+   Combine the unmodified solutions from the previous generation with the newly created offspring to form the new generation.
+
+8. **Termination**
+   Repeat the process for a specified number of generations or until a termination criterion is met. The termination criterion could be finding a solution with a sufficiently high fitness value or reaching a predefined number of generations.
