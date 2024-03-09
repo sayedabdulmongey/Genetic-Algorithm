@@ -1,4 +1,4 @@
-# Author : Sayed Salem
+# Author : Eng. Sayed Salem
 
 import numpy as np
 from GA_functions import *
